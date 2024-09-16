@@ -10,30 +10,40 @@
   <ng-container *ngIf="blogPosts$ | async as blogPosts">
     <table class="table table-bordered mt-2">
       <thead>
-        <tr>
-          <th>
-            Title
-          </th>
-          <th>
-            Short Description
-          </th>
-          <th>
-            Is Visible?
-          </th>
-        </tr>
+      <tr>
+        <th>
+          Title
+        </th>
+        <th>
+          Short Description
+        </th>
+        <th>
+          Is Visible?
+        </th>
+        <th>
+          Categories
+        </th>
+      </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let blogPost of blogPosts">
-          <td>
-            {{blogPost.title}}
-          </td>
-          <td>
-            {{blogPost.shortDescription}}
-          </td>
-          <td>
-            {{blogPost.isVisible}}
-          </td>
-        </tr>
+      <tr *ngFor="let blogPost of blogPosts">
+        <td>
+          {{ blogPost.title }}
+        </td>
+        <td>
+          {{ blogPost.shortDescription }}
+        </td>
+        <td>
+          {{ blogPost.isVisible }}
+        </td>
+        <td>
+            <span *ngFor="let category of blogPost.categories">
+              <span class="badge badge-primary me-2" style="background: gray;">
+                {{ category.name }}
+              </span>
+            </span>
+        </td>
+      </tr>
       </tbody>
     </table>
   </ng-container>
