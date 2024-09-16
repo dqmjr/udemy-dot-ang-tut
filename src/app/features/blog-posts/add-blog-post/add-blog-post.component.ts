@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {AddCategoryRequest} from "../../category/models/add-category-request.model";
 import {AddBlogPost} from "../models/add-blog-post.model";
 import {FormsModule} from "@angular/forms";
-import {DatePipe} from "@angular/common";
+import {DatePipe, NgIf} from "@angular/common";
 import {BlogPostService} from "../services/blog-post.service";
 import {Router} from "@angular/router";
 import {MarkdownModule} from "ngx-markdown";
@@ -13,7 +13,8 @@ import {MarkdownModule} from "ngx-markdown";
   imports: [
     FormsModule,
     DatePipe,
-    MarkdownModule
+    MarkdownModule,
+    NgIf
   ],
   templateUrl: './add-blog-post.component.html',
   styleUrl: './add-blog-post.component.css'
