@@ -8,6 +8,7 @@ import {AddCategoryComponent} from "./features/category/add-category/add-categor
 import {AppComponent} from "./app.component";
 import {NavbarComponent} from "./core/components/navbar/navbar.component";
 import {CategoryListComponent} from "./features/category/category-list/category-list.component";
+import {MarkdownModule} from "ngx-markdown";
 
 
 
@@ -15,6 +16,10 @@ import {CategoryListComponent} from "./features/category/category-list/category-
   declarations: [
   ],
   imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    MarkdownModule.forRoot()
   ],
   providers: [],
 })
