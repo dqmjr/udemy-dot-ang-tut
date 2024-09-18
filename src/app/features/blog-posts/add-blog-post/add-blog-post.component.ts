@@ -42,6 +42,7 @@ export class AddBlogPostComponent implements OnInit{
       publishedDate: new Date(),
       author: '',
       isVisible: true,
+      categories: []
     }
   }
 
