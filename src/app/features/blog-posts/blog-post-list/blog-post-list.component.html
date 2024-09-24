@@ -24,6 +24,7 @@
           Categories
         </th>
         <th> </th>
+        <th>Featured Image Url</th>
       </tr>
       </thead>
       <tbody>
@@ -46,6 +47,9 @@
         </td>
         <td>
           <a class="btn btn-light" [routerLink]="['/admin/blogposts', blogPost.id]">Edit</a>
+        </td>
+        <td>
+          {{ blogPost.FeaturedImageUrl }}
         </td>
       </tr>
       </tbody>
